@@ -58,7 +58,7 @@ export async function fetchLatestInvoices() {
 }
 
 export async function fetchCardData() {
-  noStore();
+  const noStore();
 
   try {
     // You can probably combine these into a single SQL query
@@ -99,7 +99,7 @@ export async function fetchFilteredInvoices(
   query: string,
   currentPage: number,
 ) {
-  noStore();
+  const noStore();
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
   try {
@@ -132,7 +132,7 @@ export async function fetchFilteredInvoices(
 }
 
 export async function fetchInvoicesPages(query: string) {
-  noStore();
+  const noStore();
 
   try {
     const count = await sql`SELECT COUNT(*)
@@ -155,7 +155,7 @@ export async function fetchInvoicesPages(query: string) {
 }
 
 export async function fetchInvoiceById(id: string) {
-  noStore();
+  const noStore();
 
   try {
     const data = await sql<InvoiceForm>`
@@ -182,7 +182,7 @@ export async function fetchInvoiceById(id: string) {
 }
 
 export async function fetchCustomers() {
-  noStore();
+  const noStore();
 
   try {
     const data = await sql<CustomerField>`
@@ -202,7 +202,7 @@ export async function fetchCustomers() {
 }
 
 export async function fetchFilteredCustomers(query: string) {
-  noStore();
+  const noStore();
 
   try {
     const data = await sql<CustomersTableType>`

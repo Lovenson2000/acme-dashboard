@@ -155,7 +155,7 @@ export async function fetchInvoicesPages(query: string) {
 }
 
 export async function fetchInvoiceById(id: string) {
-  noStore();
+  const noStore();
 
   try {
     const data = await sql<InvoiceForm>`
@@ -182,7 +182,7 @@ export async function fetchInvoiceById(id: string) {
 }
 
 export async function fetchCustomers() {
-  noStore();
+  const noStore();
 
   try {
     const data = await sql<CustomerField>`
@@ -202,7 +202,7 @@ export async function fetchCustomers() {
 }
 
 export async function fetchFilteredCustomers(query: string) {
-  noStore();
+  const noStore();
 
   try {
     const data = await sql<CustomersTableType>`
